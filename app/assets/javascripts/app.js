@@ -5,8 +5,8 @@ angular
     ]).config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'home.html',
-                controller: 'HomeCtrl'
+                templateUrl: 'question-index.html',
+                controller: 'QuestionIndexCtrl'
             });
             
         $locationProvider.html5Mode({
