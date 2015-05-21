@@ -1,5 +1,5 @@
 angular
-    .module('AngularRails', [
+    .module('rangular', [
         'ngRoute',
         'templates'
     ]).config(function ($routeProvider, $locationProvider) {
