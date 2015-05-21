@@ -1,5 +1,8 @@
-angular
-    .module('rangular', [
+/*
+ *  APP.JS
+ */
+
+angular.module('rangular', [
         'ngRoute',
         'templates'
     ]).config(function ($routeProvider, $locationProvider) {
@@ -7,6 +10,10 @@ angular
             .when('/', {
                 templateUrl: 'question-index.html',
                 controller: 'QuestionIndexCtrl'
+            })
+            .when('/questions/:questionId', {
+                templateUrl: 'question-show.html',
+                controller: 'QuestionShowCtrl'
             });
             
         $locationProvider.html5Mode({

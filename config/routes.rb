@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
 
   root 'application#index'
+
+  namespace :api, defaults: {format: 'json'} do 
+    resources :questions, only: [:index]
+  end
+
   get '*path' => 'application#index'
+
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -56,4 +63,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
